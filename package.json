@@ -1,8 +1,8 @@
 {
-  "name": "formtastik",
+  "name": "@devtastic/formtastik",
   "version": "1.0.0",
   "description": "Form API handler for Vercel and Gatsby Cloud projects",
-  "main": "index.js",
+  "main": "src/handler.js",
   "repository": "https://github.com/devtastic-org/formtastik.git",
   "bugs": "https://github.com/devtastic-org/formtastik/issues",
   "author": "Leon van der Grient",
@@ -11,5 +11,8 @@
   "dependencies": {
     "@aws-sdk/client-ses": "^3.48.0",
     "google-spreadsheet": "^3.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }
