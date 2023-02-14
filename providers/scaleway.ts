@@ -11,9 +11,13 @@ export default async function scalewayProvider(data: Record<string, unknown>) {
 
   try {
     await api.createEmail({
+      to: process.env.SCW_RECIPIENTS!.split(",").map((email) => ({ email })),
       projectId: process.env.SCW_PROJECT_ID,
-      subject: "New form submission",
-      from: { name: "Devtastic", email: "noreply@devtastic.co" },
+      subject: process.env.SCW_EMAIL_SUBJECT!,
+      from: {
+        name: process.env.SCW_FROM_NAME,
+        email: process.env.SCW_FROM_EMAIL!,
+      },
       text: Object.entries(data)
         .map(([key, value]) => `${key}: ${value}`)
         .join("\n"),
