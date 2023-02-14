@@ -1,6 +1,6 @@
 {
   "name": "formtastik",
-  "version": "2.0.0-beta.5",
+  "version": "2.0.0",
   "description": "Form API handler for Vercel Cloud projects",
   "main": "index",
   "repository": "https://github.com/its-devtastic/formtastik.git",
