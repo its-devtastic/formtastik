@@ -4,6 +4,7 @@ export default async function scalewayProvider(data: Record<string, unknown>) {
   const client = createClient({
     accessKey: process.env.SCW_ACCESS_KEY,
     secretKey: process.env.SCW_SECRET_KEY,
+    defaultRegion: "fr-par",
   });
 
   const api = new TransactionalEmail.v1alpha1.API(client);
